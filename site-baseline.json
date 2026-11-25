@@ -1,0 +1,31 @@
+{
+  "sha256": "f741b990e1eb56b0385f8cd3d5812aff0a2901ffc203d6a1e6deb77c14330c97",
+  "files": [
+    ".nojekyll",
+    "assets/diagrams/foundation-architecture.svg",
+    "assets/mark.svg",
+    "assets/search-index.json",
+    "assets/site.js",
+    "assets/theme.css",
+    "capabilities.html",
+    "cli-reference.html",
+    "host-matrix.html",
+    "index.html",
+    "quickstart.html",
+    "troubleshooting.html"
+  ],
+  "digests": {
+    "index.html": "7b2886c8659972d879cb05014265dfa3b9cd3951dad066141858e568f9f391ce",
+    "quickstart.html": "264c70a8be58f87c057f5aa451810039c82beb4edaeaad15f304a8582aa90d94",
+    "capabilities.html": "032ca96c704193c7e468102e0c8dab6ab6c9e6c6cba44a403e348116b4ee7304",
+    "host-matrix.html": "4b358fa97fd42ef19a23c993405113e35f3227367e58a9085655ad5ddc712d1c",
+    "cli-reference.html": "035f92eb3d17925f781881f49288ae4de781ea27ae5b0badc8b57817f111baac",
+    "troubleshooting.html": "da1f65558dc1b7d0f9a669a6441b222c8d4cbeac5b784b274f21750608b9017b",
+    "assets/theme.css": "5971a6b2217e373c1c5bbda73e31fe57a55e9c011e434bd9dd364875100e50ac",
+    "assets/site.js": "bc31e30cf5b4c7738d4b9d87d587fa17348c7bf3572736a8311fe73586ed6308",
+    "assets/mark.svg": "90accb38dbfe1304720da596d25dca43dd7013983eefaebe4b79b19a60c70cd3",
+    "assets/search-index.json": "e39f07d01469b11f62eb398b73a6fffd16154579a189f177957d672ddcf472f9",
+    "assets/diagrams/foundation-architecture.svg": "82d619e4768511acce3baea7b89984b791c6bf1c644468629e125171e14aad6c",
+    ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  }
+}

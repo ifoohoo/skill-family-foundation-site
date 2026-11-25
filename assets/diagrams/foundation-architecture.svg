@@ -1,0 +1,112 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 940 320" width="940" height="320" role="img" aria-label="Skill Family Foundation 三角色边界与四单元依赖架构图">
+  <defs>
+    <marker id="fnd-arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse">
+      <path d="M 1 1.5 L 8.5 5 L 1 8.5 z" class="fnd-arrow-head"/>
+    </marker>
+  </defs>
+  <style>
+    :root {
+      color-scheme: light dark;
+      color: #0f172a;
+      --fnd-surface: rgba(99, 102, 241, 0.06);
+      --fnd-card: rgba(148, 163, 184, 0.10);
+      --fnd-stroke: rgba(99, 102, 241, 0.38);
+      --fnd-plugin-fill: rgba(16, 185, 129, 0.09);
+      --fnd-plugin-stroke: rgba(16, 185, 129, 0.45);
+      --fnd-role-fill: rgba(59, 130, 246, 0.08);
+      --fnd-role-stroke: rgba(59, 130, 246, 0.34);
+      --fnd-badge: rgba(99, 102, 241, 0.16);
+      --fnd-plugin-badge: rgba(16, 185, 129, 0.18);
+      --fnd-line: rgba(99, 102, 241, 0.78);
+      --fnd-plugin-line: rgba(16, 185, 129, 0.78);
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        color: #e2e8f0;
+        --fnd-surface: rgba(99, 102, 241, 0.10);
+        --fnd-card: rgba(148, 163, 184, 0.12);
+        --fnd-stroke: rgba(129, 140, 248, 0.48);
+        --fnd-plugin-fill: rgba(16, 185, 129, 0.13);
+        --fnd-plugin-stroke: rgba(52, 211, 153, 0.50);
+        --fnd-role-fill: rgba(56, 189, 248, 0.10);
+        --fnd-role-stroke: rgba(56, 189, 248, 0.42);
+        --fnd-badge: rgba(129, 140, 248, 0.24);
+        --fnd-plugin-badge: rgba(52, 211, 153, 0.22);
+        --fnd-line: rgba(165, 180, 252, 0.85);
+        --fnd-plugin-line: rgba(110, 231, 183, 0.85);
+      }
+    }
+    .fnd-zone { fill: var(--fnd-surface); stroke: var(--fnd-stroke); stroke-width: 1.5; stroke-dasharray: 5 4; }
+    .fnd-role { fill: var(--fnd-role-fill); stroke: var(--fnd-role-stroke); stroke-width: 1.4; }
+    .fnd-pkg { fill: var(--fnd-card); stroke: var(--fnd-stroke); stroke-width: 1.6; }
+    .fnd-plugin { fill: var(--fnd-plugin-fill); stroke: var(--fnd-plugin-stroke); stroke-width: 1.6; }
+    .fnd-pill { fill: var(--fnd-badge); }
+    .fnd-plugin-pill { fill: var(--fnd-plugin-badge); }
+    .fnd-ink { fill: currentColor; font-family: -apple-system, BlinkMacSystemFont, "PingFang SC", "Microsoft YaHei", sans-serif; }
+    .fnd-h { font-size: 13.5px; font-weight: 700; }
+    .fnd-sub { font-size: 11.5px; fill-opacity: 0.78; }
+    .fnd-tag { font-size: 10.5px; font-weight: 700; letter-spacing: 0.02em; }
+    .fnd-edge { stroke: var(--fnd-line); stroke-width: 2; fill: none; }
+    .fnd-edge-dash { stroke: var(--fnd-plugin-line); stroke-width: 1.75; stroke-dasharray: 4 3; fill: none; }
+    .fnd-arrow-head { fill: currentColor; fill-opacity: 0.82; }
+  </style>
+
+  <!-- 顶层三角色职责带 -->
+  <rect x="18" y="14" width="288" height="68" rx="12" class="fnd-role"/>
+  <text x="34" y="38" class="fnd-ink fnd-h">AI 编程宿主（十宿主环境）</text>
+  <text x="34" y="58" class="fnd-ink fnd-sub">拥有对话入口、模型调用与原生插件加载语义</text>
+
+  <rect x="326" y="14" width="288" height="68" rx="12" class="fnd-role"/>
+  <text x="342" y="38" class="fnd-ink fnd-h">Foundation（工程底座）</text>
+  <text x="342" y="58" class="fnd-ink fnd-sub">统一机器契约、路径收容、原子写与工程检查</text>
+
+  <rect x="634" y="14" width="288" height="68" rx="12" class="fnd-role"/>
+  <text x="650" y="38" class="fnd-ink fnd-h">业务技能族（开发者仓库）</text>
+  <text x="650" y="58" class="fnd-ink fnd-sub">专注领域规则、提示词设计与业务验收判断</text>
+
+  <!-- Foundation 三个单向依赖 npm 包 -->
+  <rect x="18" y="102" width="690" height="202" rx="16" class="fnd-zone"/>
+  <text x="36" y="126" class="fnd-ink fnd-tag">三个锁步发布的公开 npm 包（单向依赖链：Contracts → Harness → Engineering Kit）</text>
+
+  <rect x="36" y="142" width="198" height="144" rx="12" class="fnd-pkg"/>
+  <rect x="48" y="154" width="84" height="20" rx="10" class="fnd-pill"/>
+  <text x="90" y="168" class="fnd-ink fnd-tag" text-anchor="middle">01 机器契约层</text>
+  <text x="48" y="194" class="fnd-ink fnd-h" font-size="12.5">skill-family-contracts</text>
+  <text x="48" y="216" class="fnd-ink fnd-sub">• 59 类 JSON Schema</text>
+  <text x="48" y="236" class="fnd-ink fnd-sub">• 内核操作协议校验</text>
+  <text x="48" y="256" class="fnd-ink fnd-sub">• 唯一 SFC* 错误码表</text>
+
+  <line x1="236" y1="214" x2="260" y2="214" class="fnd-edge" marker-end="url(#fnd-arrow)"/>
+
+  <rect x="264" y="142" width="204" height="144" rx="12" class="fnd-pkg"/>
+  <rect x="276" y="154" width="84" height="20" rx="10" class="fnd-pill"/>
+  <text x="318" y="168" class="fnd-ink fnd-tag" text-anchor="middle">02 薄运行时层</text>
+  <text x="276" y="194" class="fnd-ink fnd-h" font-size="12.5">skill-family-harness-node</text>
+  <text x="276" y="216" class="fnd-ink fnd-sub">• 路径收容与 bound-read</text>
+  <text x="276" y="236" class="fnd-ink fnd-sub">• 原子写与进程组监管</text>
+  <text x="276" y="256" class="fnd-ink fnd-sub">• 状态链与词元预算锁</text>
+
+  <line x1="470" y1="214" x2="492" y2="214" class="fnd-edge" marker-end="url(#fnd-arrow)"/>
+
+  <rect x="496" y="142" width="196" height="144" rx="12" class="fnd-pkg"/>
+  <rect x="508" y="154" width="84" height="20" rx="10" class="fnd-pill"/>
+  <text x="550" y="168" class="fnd-ink fnd-tag" text-anchor="middle">03 构建工具层</text>
+  <text x="508" y="194" class="fnd-ink fnd-h" font-size="12.5">skill-family-engineering-kit</text>
+  <text x="508" y="216" class="fnd-ink fnd-sub">• scaffold / adopt-plan</text>
+  <text x="508" y="236" class="fnd-ink fnd-sub">• projection 受控投影</text>
+  <text x="508" y="256" class="fnd-ink fnd-sub">• check 与十宿主模拟</text>
+
+  <!-- 独立公开插件单元 -->
+  <rect x="728" y="102" width="194" height="202" rx="16" class="fnd-plugin"/>
+  <rect x="744" y="118" width="96" height="20" rx="10" class="fnd-plugin-pill"/>
+  <text x="792" y="132" class="fnd-ink fnd-tag" text-anchor="middle">独立公开插件</text>
+  <text x="744" y="158" class="fnd-ink fnd-h">foundation-adoption</text>
+  <text x="744" y="176" class="fnd-ink fnd-h">-review</text>
+  <text x="744" y="202" class="fnd-ink fnd-sub">• foundation-initialize</text>
+  <text x="744" y="222" class="fnd-ink fnd-sub">• adoption-review 诊断</text>
+  <text x="744" y="242" class="fnd-ink fnd-sub">• engineering-check 审阅</text>
+  <text x="744" y="268" class="fnd-ink fnd-sub">不发布 npm，经公开仓</text>
+  <text x="744" y="284" class="fnd-ink fnd-sub">与 Hub 面向多宿主分发</text>
+
+  <line x1="726" y1="214" x2="696" y2="214" class="fnd-edge-dash" marker-end="url(#fnd-arrow)"/>
+</svg>
